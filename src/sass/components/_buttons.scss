@@ -1,3 +1,23 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
 
+.btn{
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        &:hover{
+            color: v.$green;
+        }
+        &::after{
+            content: "";
+            height: 2px;
+            width: 95%;
+            display: inline-block;
+            background-color: v.$green;
+            position: absolute;
+            bottom: -0.62rem;
+            right: 3%;
+        }
+    }
+}
