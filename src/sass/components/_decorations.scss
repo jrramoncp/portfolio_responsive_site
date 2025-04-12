@@ -10,8 +10,13 @@
     margin-top: 2,5rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    @include m.breakpoint(tablet){
+    @include m.breakpoint("tablet"){
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    @include m.breakpoint("laptop"){
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
   }

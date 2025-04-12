@@ -8,9 +8,15 @@
         @include m.breakpoint("tablet"){
             margin-top: 6rem;
         }
+        @include m.breakpoint("laptop"){
+            margin-top: 6rem;
+        }
         .hero__content{
             @include m.breakpoint("tablet"){
                 max-width: 75%;
+            }
+            @include m.breakpoint("laptop"){
+                max-width: 80%;
             }
             .title{
                 font-size: 2.2rem;
@@ -25,6 +31,13 @@
                     line-height: 4rem;
                     max-width: 90%;
                 }
+                @include m.breakpoint("laptop"){
+                    text-align: left;
+                    font-size: 5rem;
+                    line-height: 4.5rem;
+                    letter-spacing: -2.5px;
+                }
+                
                 .hightlight{
                     font-size: inherit;
                     line-height: inherit;
@@ -40,7 +53,12 @@
                         bottom: 1.1rem;
                         @include m.breakpoint("tablet"){
                             width: 90%;
-                            right: 3rem;
+                            right: 5rem;
+                        }
+                        @include m.breakpoint("laptop"){
+                            width: 70%;
+                            right: 5rem;
+                            bottom: 0.8rem;
                         }
                     }
                 }
@@ -55,11 +73,21 @@
                     font-size: 1.12rem;
                     max-width: 80%;
                 }
+                @include m.breakpoint("laptop"){
+                    text-align: left;
+                    font-size: 1.12rem;
+                    max-width:60%;
+                    padding-top: 2rem;
+                    padding-bottom: 3rem;
+                }
             }
 
             .btn{
                 text-align: center;
                 @include m.breakpoint("tablet"){
+                    text-align: left;
+                }
+                @include m.breakpoint("laptop"){
                     text-align: left;
                 }
             }
