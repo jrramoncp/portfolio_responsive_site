@@ -13,8 +13,22 @@
             flex-direction: row;
             justify-content: space-between;
         }
+        @include m.breakpoint("laptop"){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include m.breakpoint("desktop"){
+            flex-direction: row;
+            justify-content: space-between;
+        }
         img{
-            max-width: 8rem
+            max-width: 8rem;
+            @include m.breakpoint("laptop"){
+                max-width: 10rem
+            }
+            @include m.breakpoint("desktop"){
+                max-width: 10rem
+            }
         }
         .nav{
             ul{
@@ -24,6 +38,12 @@
                     a{
                         img{
                             max-width: 1.25rem;
+                            @include m.breakpoint("laptop"){
+                                max-width: 1.5rem
+                            }
+                            @include m.breakpoint("desktop"){
+                                max-width: 1.5rem
+                            }
                         }
                     }
                 }
