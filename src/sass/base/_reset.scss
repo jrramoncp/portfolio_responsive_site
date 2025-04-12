@@ -56,11 +56,28 @@ body{
 
   background-position: 
     top 8rem left -300px,
-    top 22rem center,
+    top 20rem right 17rem,
     center right,
     bottom left -300px,
-    top right;
+    top right 2.5rem;
   background-size: auto, auto, auto, auto, 300px;
+  }
+
+  @include m.breakpoint("desktop"){
+    background-image: 
+    url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
+    url(img/bg-circles-mirror.svg),
+    url(img/bg-circles.svg),
+    url(/img/adam-bg-img.png);
+
+  background-position: 
+    top 8rem left -300px,
+    top 26rem right 23rem,
+    center right,
+    bottom left -300px,
+    top right 5rem;
+  background-size: auto, auto, auto, auto, 350px;
   }
 
 }
@@ -82,7 +99,7 @@ body{
     padding-right: 6.25rem;
   }
   @include m.breakpoint("desktop"){
-    max-width: 1600px;
+    max-width: 1800px;
     padding-left: 10rem;
     padding-right: 10rem;
   }
