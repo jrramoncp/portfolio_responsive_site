@@ -25,10 +25,28 @@ body{
   background-position: 
     top 8rem left -300px,
     top 15rem right -4rem,
-    center left 250px,
+    center right -50px,
     bottom left -300px,
     top center;
   background-size: auto, auto, auto, auto, 160px;
+
+  @include m.breakpoint("tablet"){
+    background-image: 
+    url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
+    url(img/bg-circles-mirror.svg),
+    url(img/bg-circles.svg),
+    url(/img/adam-bg-img.png);
+
+  background-position: 
+    top 8rem left -300px,
+    top 24.5rem right -4rem,
+    center right,
+    bottom left -300px,
+    top right;
+  background-size: auto, auto, auto, auto, 300px;
+  }
+
 }
 
 .container{

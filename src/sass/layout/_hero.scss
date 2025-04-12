@@ -3,8 +3,15 @@
 
 .hero{
     .container{
-        margin-top: 300px;
+        margin-top: 18.75rem;
+        margin-bottom: 2.5rem;
+        @include m.breakpoint("tablet"){
+            margin-top: 6rem;
+        }
         .hero__content{
+            @include m.breakpoint("tablet"){
+                max-width: 75%;
+            }
             .title{
                 font-size: 2.2rem;
                 line-height: 2.2rem;
@@ -12,6 +19,12 @@
                 text-align: center;
                 padding-bottom:1.5rem ;
                 position: relative;
+                @include m.breakpoint("tablet"){
+                    text-align: left;
+                    font-size: 4rem;
+                    line-height: 4rem;
+                    max-width: 90%;
+                }
                 .hightlight{
                     font-size: inherit;
                     line-height: inherit;
@@ -25,6 +38,10 @@
                         position: absolute;
                         right: 2rem;
                         bottom: 1.1rem;
+                        @include m.breakpoint("tablet"){
+                            width: 90%;
+                            right: 3rem;
+                        }
                     }
                 }
             }
@@ -33,10 +50,18 @@
                 text-align: center;
                 line-height: 1.62rem;
                 padding-bottom: 1.5rem;
+                @include m.breakpoint("tablet"){
+                    text-align: left;
+                    font-size: 1.12rem;
+                    max-width: 80%;
+                }
             }
 
             .btn{
                 text-align: center;
+                @include m.breakpoint("tablet"){
+                    text-align: left;
+                }
             }
         }
     }

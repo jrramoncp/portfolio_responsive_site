@@ -1,0 +1,17 @@
+@use '../abstract/_variables' as v;
+@use '../abstract/_mixins' as m;
+
+
+.divider{
+    width: 90%;
+    height: 1px;
+    display: inline-block;
+    background: v.$white;
+    margin-top: 2,5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include m.breakpoint(tablet){
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+  }
