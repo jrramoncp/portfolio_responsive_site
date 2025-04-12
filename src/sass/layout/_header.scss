@@ -8,6 +8,11 @@
         flex-direction: column;
         gap: 1.25rem;
         align-items: center;
+
+        @include m.breakpoint("tablet"){
+            flex-direction: row;
+            justify-content: space-between;
+        }
         img{
             max-width: 8rem
         }

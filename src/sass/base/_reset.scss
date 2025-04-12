@@ -18,9 +18,14 @@ body{
 }
 
 .container{
-  max-width: 370px;
+  max-width: 340px;
   padding-left: 16px;
   padding-right: 16px;
   margin-right: auto;
   margin-left: auto;
+  @include m.breakpoint("tablet"){
+    max-width: 700px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
