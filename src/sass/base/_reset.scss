@@ -17,20 +17,22 @@ body{
   background-color: v.$black;
   background-image: 
     url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
     url(img/bg-circles-mirror.svg),
     url(img/bg-circles.svg),
     url(/img/adam-bg-mobile.png);
   background-repeat: no-repeat;
   background-position: 
-    top left -300px,
+    top 8rem left -300px,
+    top 15rem right -4rem,
     center left 250px,
     bottom left -300px,
     top center;
-  background-size: auto, auto, auto, 160px;
+  background-size: auto, auto, auto, auto, 160px;
 }
 
 .container{
-  max-width: 340px;
+  max-width: 350px;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-right: auto;
