@@ -1,2 +1,9 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
+
+.hero{
+    .container{
+        margin-top: 300px;
+    }
+
+}
