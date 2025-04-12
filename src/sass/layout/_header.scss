@@ -1,2 +1,28 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
+
+.header{
+    margin-top: 1.25rem;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center;
+        img{
+            max-width: 8rem
+        }
+        .nav{
+            ul{
+                @include m.reset_list();
+                gap: 1.56rem;
+                li{
+                    a{
+                        img{
+                            max-width: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

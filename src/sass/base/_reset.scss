@@ -8,11 +8,14 @@
   box-sizing: border-box;
   font-size: 16px;
   font-family: v.$primary-font;
-  color: v.$black-color;
+  color: v.$white;
 }
 
 //BASE STYLES
 
+body{
+  background-color: v.$black;
+}
 
 .container{
   max-width: 370px;
