@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: v.$primary-font;
   color: v.$white;
 }
@@ -19,13 +19,23 @@ body{
 
 .container{
   max-width: 340px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-right: auto;
   margin-left: auto;
   @include m.breakpoint("tablet"){
     max-width: 700px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include m.breakpoint("laptop"){
+    max-width: 1200px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
+  @include m.breakpoint("desktop"){
+    max-width: 1600px;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 }
