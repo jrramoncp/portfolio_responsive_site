@@ -9,6 +9,9 @@
         @include m.breakpoint("laptop"){
             padding-top: 6.25rem;
         }
+        @include m.breakpoint("desktop"){
+            padding-top: 6.25rem;
+        }
         .title{
             display: flex;
             justify-content: space-between;
@@ -18,6 +21,9 @@
                 padding-bottom: 3.75rem;
             }
             @include m.breakpoint("laptop"){
+                padding-bottom: 3.75rem;
+            }
+            @include m.breakpoint("desktop"){
                 padding-bottom: 3.75rem;
             }
 
@@ -30,6 +36,9 @@
                     font-size: 4.5rem;
                 }
                 @include m.breakpoint("laptop"){
+                    font-size: 4.5rem;
+                }
+                @include m.breakpoint("desktop"){
                     font-size: 4.5rem;
                 }
             }
@@ -48,12 +57,21 @@
                 grid-template-rows: repeat(3, 1fr);
                 gap: 1.5rem;
             }
+            @include m.breakpoint("desktop"){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
 
             article{
                 padding-bottom: 2.5rem;
                 .img__container{
                     max-width: 100%;
                     position: relative;
+                    @include m.breakpoint("desktop"){
+                        max-width: fit-content;
+                    }
                     img{
                         max-width: 100%; 
                         }
@@ -61,6 +79,32 @@
                         display: none;
                     }
                     @include m.breakpoint("laptop"){
+                        &:hover{
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                inset: 0;
+                                background-color: rgba(0, 0, 0, 0.5); // oscurece la imagen
+                                opacity: 0;
+                                transition: opacity 0.5s ease;
+                                z-index: 1;
+                            }
+                            &:hover::before {
+                                opacity: 1;
+                            }
+                            .img__buttons{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                position: absolute;
+                                bottom: 42%;
+                                left: 40%;
+                                z-index: 2;
+                                
+                            }
+                        }
+                    }
+                    @include m.breakpoint("desktop"){
                         &:hover{
                             &::before {
                                 content: '';
@@ -94,6 +138,9 @@
                     font-weight: v.$font-bold;
                     line-height: 2rem;
                     padding-bottom: 0.5rem;
+                    @include m.breakpoint("desktop"){
+                        max-width: 50%;
+                    }
                     
                 }
         
@@ -101,12 +148,18 @@
                     @include m.reset_list();
                     gap:1rem;
                     padding-bottom: 1rem;
+                    @include m.breakpoint("desktop"){
+                        max-width: 50%;
+                    }
                 }
         
                 .buttons{
                     display: flex;
                     gap: 2rem;
                     @include m.breakpoint("laptop"){
+                        display: none;
+                    }
+                    @include m.breakpoint("desktop"){
                         display: none;
                     }
                 }
