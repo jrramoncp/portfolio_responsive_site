@@ -35,7 +35,7 @@
                 text-align: left;
             }
                 
-            h2{
+            h3{
                 font-size: 2rem;
                 line-height: 2.5rem;
                 letter-spacing: -1px;
@@ -68,6 +68,19 @@
                     padding-top: 1rem;
                 }
             }
+        }
+    } 
+    .divider{
+        @include m.breakpoint("tablet"){
+            display: none;
+        }
+
+        @include m.breakpoint("laptop"){
+            display: none;
+        }
+
+        @include m.breakpoint("desktop"){
+            display: none;
         }
     }
 }
