@@ -1,0 +1,28 @@
+@use '../abstract/_variables' as v;
+@use '../abstract/_mixins' as m;
+
+.languages{
+    .container{
+        article{
+            text-align: center;
+            padding-top: 1.5rem;
+            &:first-of-type{
+                padding-top:2.5rem ;
+            }
+
+            &:last-of-type{
+                padding-bottom: 2.5rem;
+            }
+            h2{
+                font-size: 2rem;
+                line-height: 2.5rem;
+                letter-spacing: -1px;
+                font-weight: v.$font-bold;
+            }
+            p{
+                line-height: 1.625rem;
+
+            }
+        }
+    }
+}
