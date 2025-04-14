@@ -47,7 +47,7 @@
        .gallery{
             @include m.breakpoint("tablet"){
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(1fr, 2);
                 grid-template-rows: repeat(3, 1fr);
                 gap: 1.5rem;
             }
@@ -61,7 +61,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(3, 1fr);
-                gap: 1.5rem;
+                column-gap: 25rem;
             }
 
             article{
