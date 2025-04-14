@@ -2,26 +2,71 @@
 @use '../abstract/_mixins' as m;
 
 .languages{
-    .container{
+    .container{ 
+        padding-bottom: 2.5rem;
+        
+        @include m.breakpoint("tablet"){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
+        @include m.breakpoint("laptop"){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+        }
+        @include m.breakpoint("desktop"){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+        }
         article{
             text-align: center;
             padding-top: 1.5rem;
-            &:first-of-type{
-                padding-top:2.5rem ;
+            @include m.breakpoint("tablet"){
+                text-align: left;
             }
-
-            &:last-of-type{
-                padding-bottom: 2.5rem;
+            @include m.breakpoint("laptop"){
+                text-align: left;
             }
+            @include m.breakpoint("desktop"){
+                text-align: left;
+            }
+                
             h2{
                 font-size: 2rem;
                 line-height: 2.5rem;
                 letter-spacing: -1px;
                 font-weight: v.$font-bold;
+                @include m.breakpoint("tablet"){
+                    font-size: 3rem;
+                    line-height: 3,5rem ;
+                }
+                @include m.breakpoint("laptop"){
+                    font-size: 2.5rem;
+                    line-height: 3,5rem ;
+                }
+                @include m.breakpoint("desktop"){
+                    font-size: 2.5rem;
+                    line-height: 3,5rem ;
+                }
             }
             p{
                 line-height: 1.625rem;
-
+                @include m.breakpoint("tablet"){
+                    font-size: 1.125rem;
+                    padding-top: 1rem;
+                }
+                @include m.breakpoint("laptop"){
+                    font-size: 1.125rem;
+                    padding-top: 1rem;
+                }
+                @include m.breakpoint("desktop"){
+                    font-size: 1.125rem;
+                    padding-top: 1rem;
+                }
             }
         }
     }
