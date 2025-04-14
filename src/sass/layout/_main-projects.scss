@@ -1,0 +1,116 @@
+@use '../abstract/_variables' as v;
+@use '../abstract/_mixins' as m;
+
+.projects{
+    .container{
+        @include m.breakpoint("tablet"){
+            padding-top: 6.25rem;
+        }
+        @include m.breakpoint("laptop"){
+            padding-top: 6.25rem;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2.5rem ;
+            @include m.breakpoint("tablet"){
+                padding-bottom: 3.75rem;
+            }
+            @include m.breakpoint("laptop"){
+                padding-bottom: 3.75rem;
+            }
+
+            h2{
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+                font-weight: v.$font-bold;
+                letter-spacing: -1.14px;
+                @include m.breakpoint("tablet"){
+                    font-size: 4.5rem;
+                }
+                @include m.breakpoint("laptop"){
+                    font-size: 4.5rem;
+                }
+            }
+        }
+
+       .gallery{
+            @include m.breakpoint("tablet"){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+            @include m.breakpoint("laptop"){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+
+            article{
+                padding-bottom: 2.5rem;
+                .img__container{
+                    max-width: 100%;
+                    position: relative;
+                    img{
+                        max-width: 100%; 
+                        }
+                    .img__buttons{
+                        display: none;
+                    }
+                    @include m.breakpoint("laptop"){
+                        &:hover{
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                inset: 0;
+                                background-color: rgba(0, 0, 0, 0.5); // oscurece la imagen
+                                opacity: 0;
+                                transition: opacity 0.5s ease;
+                                z-index: 1;
+                            }
+                            &:hover::before {
+                                opacity: 1;
+                            }
+                            .img__buttons{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2rem;
+                                position: absolute;
+                                bottom: 42%;
+                                left: 40%;
+                                z-index: 2;
+                                
+                            }
+                        }
+                    }
+                }
+        
+                h3{
+                    padding-top: 1.25rem;
+                    font-size: 1.5rem;
+                    font-weight: v.$font-bold;
+                    line-height: 2rem;
+                    padding-bottom: 0.5rem;
+                    
+                }
+        
+                ul{
+                    @include m.reset_list();
+                    gap:1rem;
+                    padding-bottom: 1rem;
+                }
+        
+                .buttons{
+                    display: flex;
+                    gap: 2rem;
+                    @include m.breakpoint("laptop"){
+                        display: none;
+                    }
+                }
+            }
+       }
+    }
+}
