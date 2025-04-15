@@ -16,10 +16,10 @@
 body{
   background-color: v.$black;
   background-image: 
-    url(/img/bg-circles.svg),
-    url(/img/bg-oval.svg),
-    url(/img/bg-circles-mirror.svg),
-    url(/img/adam-bg-mobile.png);
+    url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
+    url(img/bg-circles-mirror.svg),
+    url(img/adam-bg-mobile.png);
   background-repeat: no-repeat;
   background-position: 
     top 8rem left -300px,
@@ -30,10 +30,10 @@ body{
 
   @include m.breakpoint("tablet"){
     background-image: 
-    url(/img/bg-circles.svg),
-    url(/img/bg-oval.svg),
-    url(/img/bg-circles-mirror.svg),
-    url(/img/adam-bg-img.png);
+    url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
+    url(img/bg-circles-mirror.svg),
+    url(img/adam-bg-img.png);
 
   background-position: 
     top 8rem left -300px,
@@ -44,10 +44,10 @@ body{
   }
   @include m.breakpoint("laptop"){
     background-image: 
-    url(/img/bg-circles.svg),
-    url(/img/bg-oval.svg),
-    url(/img/bg-circles-mirror.svg),
-    url(/img/adam-bg-img.png);
+    url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
+    url(img/bg-circles-mirror.svg),
+    url(img/adam-bg-img.png);
 
   background-position: 
     top 8rem left -300px,
@@ -59,10 +59,10 @@ body{
 
   @include m.breakpoint("desktop"){
     background-image: 
-    url(/img/bg-circles.svg),
-    url(/img/bg-oval.svg),
-    url(/img/bg-circles-mirror.svg),
-    url(/img/adam-bg-img.png);
+    url(img/bg-circles.svg),
+    url(img/bg-oval.svg),
+    url(img/bg-circles-mirror.svg),
+    url(img/adam-bg-img.png);
 
   background-position: 
     top 8rem left -300px,
