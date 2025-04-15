@@ -21,8 +21,16 @@
                 display: flex;
                 justify-content: space-between;
             }
+
+            @include m.breakpoint("desktop"){
+                display: flex;
+                justify-content: space-between;
+            }
             .footer__text{
                 @include m.breakpoint("laptop"){
+                    max-width: 50%;
+                }
+                @include m.breakpoint("desktop"){
                     max-width: 50%;
                 }
                 h2{
@@ -36,6 +44,11 @@
                     font-size: 4.3rem;
                     padding-bottom: 2rem;
                   }
+                  @include m.breakpoint("desktop"){
+                    text-align: left;
+                    font-size: 5.5rem;
+                    padding-bottom: 3rem;
+                  }
                 }
                 p{
                     line-height: 1.5rem;
@@ -43,7 +56,11 @@
                     padding-bottom: 1.25rem;
                     @include m.breakpoint("laptop"){
                         text-align: left;
+                    }
+                    @include m.breakpoint("desktop"){
+                        text-align: left;
                         font-size: 1.12rem;
+                        max-width: 60%;
                     }
                 }
             }
@@ -53,6 +70,9 @@
                 flex-direction: column;
                 padding-bottom: 6.25rem;
                 @include m.breakpoint("laptop"){
+                    width: 40%;
+                }
+                @include m.breakpoint("desktop"){
                     width: 40%;
                 }
                 label{
