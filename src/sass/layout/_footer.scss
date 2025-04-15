@@ -3,11 +3,19 @@
 
 .footer{
     background-color: v.$darkgrey;
+    background-image: url(/img/bg-circles.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 10rem left -300px;
+    background-size: auto;
     max-width: 100%;
     .container{
         padding-top: 3.75rem;
         .footer__content{   
-
+            @include m.breakpoint("tablet"){
+                max-width: 70%;
+                margin-right: auto;
+                margin-left: auto;
+            }
             .footer__text{
                 h2{
                   font-size: 2.5rem;
@@ -70,7 +78,9 @@
         }
 
         .footer__nav{
+            //Stiles are common with header.
             .container{
+                //this container is only for re-use header stiles. 
                 margin: 0;
                 padding: 0;
             }
