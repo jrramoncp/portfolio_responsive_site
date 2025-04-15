@@ -1,2 +1,80 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
+
+.footer{
+    background-color: v.$darkgrey;
+    max-width: 100%;
+    .container{
+        padding-top: 3.75rem;
+        .footer__content{   
+
+            .footer__text{
+                h2{
+                  font-size: 2.5rem;
+                  font-weight: v.$font-bold;
+                  line-height: 2.5rem;  
+                  text-align: center;
+                  padding-bottom: 1.25rem;
+                }
+                p{
+                    line-height: 1.5rem;
+                    text-align: center;
+                    padding-bottom: 1.25rem;
+                }
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 6.25rem;
+                label{
+                    color: v.$lightgrey;
+                }
+
+                .form__text{
+                    border: none;
+                    border-bottom: 1px solid v.$lightgrey;
+                    outline: none;
+                    resize: none;
+                    background-color: v.$darkgrey;
+                    margin-bottom: 1rem;
+                    padding: 0.5rem 0.25rem;
+                    max-width: 100%;
+
+                }
+
+                .button{
+                    display: block;
+                    max-width:40%;
+                    align-self: flex-end;
+                    color: v.$white;
+                    background-color: v.$darkgrey;
+                    border: none;
+                    position: relative;
+                    margin-top: 1rem;
+                    &:hover{
+                        color: v.$green;
+                    }
+                    &::after{
+                        content: "";
+                        height: 2px;
+                        width: 95%;
+                        display: inline-block;
+                        background-color: v.$green;
+                        position: absolute;
+                        bottom: -0.62rem;
+                        right: 3%;
+                    }
+                }
+            }
+        }
+
+        .footer__nav{
+            .container{
+                margin: 0;
+                padding: 0;
+            }
+            padding-bottom: 3rem;
+        }
+    }
+}

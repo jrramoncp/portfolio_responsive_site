@@ -1,7 +1,7 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
 
-.header{
+.header, .footer__nav{
     margin-top: 1.25rem;
     .container{
         display: flex;
